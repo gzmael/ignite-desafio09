@@ -3,12 +3,13 @@ import { config } from "dotenv";
 import express from "express";
 import "express-async-errors";
 import "reflect-metadata";
-import "./database";
+import createConnection from "./database";
 import { router } from "./routes";
 import "./shared/container";
 import { AppError } from "./shared/errors/AppError";
 
 config();
+createConnection();
 const app = express();
 
 app.use(cors());
