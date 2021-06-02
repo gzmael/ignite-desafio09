@@ -6,13 +6,13 @@ import {
   PrimaryGeneratedColumn
 } from 'typeorm';
 import { v4 as uuid } from 'uuid';
-
 import { Statement } from '../../statements/entities/Statement';
+
 
 @Entity('users')
 export class User {
   @PrimaryGeneratedColumn('uuid')
-  id?: string;
+  id: string;
 
   @Column()
   name: string;
